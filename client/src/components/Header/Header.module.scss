@@ -1,6 +1,11 @@
+@import '../../styles/roots';
+
 .header {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
-  background-color: #fbfef9;
+  background-color: $white-color;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
 
   & .header__container {
     display: flex;
@@ -9,11 +14,11 @@
     padding-top: 15px;
     padding-bottom: 15px;
 
-    & .title {
-      font-family: 'Poppins';
-      font-weight: bold;
+    & .logo {
+      font-weight: 700;
       font-size: 26px;
       padding-right: 20px;
+      font-family: 'Comfortaa';
 
       & span {
         color: $accent-color;
@@ -26,36 +31,53 @@
       justify-content: space-between;
       column-gap: 77px;
       padding-right: 20px;
-    }
+      padding-left: 20px;
 
-    & .search {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: #979797;
-      column-gap: 10px;
-      cursor: pointer;
-      transition: color 0.3s ease-in-out;
-
-      & svg {
-        color: currentColor;
-      }
-
-      &:hover {
-        color: #110b11;
+      & li {
+        transition: color 0.3s ease-in-out;
+        &:hover {
+          color: $accent-color;
+        }
       }
     }
 
-    & .cart {
+    & .right_part {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      column-gap: 10px;
-      position: relative;
+      column-gap: 40px;
 
-      &::after {
-        content: '';
-        position: absolute;
+      & .search {
+        display: flex;
+        align-items: center;
+        color: #979797;
+        column-gap: 10px;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+
+        & svg {
+          color: currentColor;
+        }
+
+        &:hover {
+          color: #110b11;
+        }
+      }
+
+      & .cart {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          background-color: $grey-color;
+          height: 150%;
+          width: 1px;
+          left: -20px;
+        }
       }
     }
   }
