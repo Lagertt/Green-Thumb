@@ -4,3 +4,7 @@ export const SHOP_ROUTE = '/basket';
 export const LOGIN_ROUTE = '/basket';
 export const REGISTRATION_ROUTE = '/basket';
 export const PLANT_ROUTE = '/plant';
+export const CONTACTS_ROUTE = '/contacts';
+export const DELIVERY_ROUTE = '/delivery';
+export const HOME_ROUTE = '/';
+export const NEWS_ROUTE = '/news';
