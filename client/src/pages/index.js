@@ -1,0 +1,9 @@
+export { default as Auth } from './Auth';
+export { default as Basket } from './Basket';
+export { default as Contacts } from './Contacts';
+export { default as Delivery } from './Delivery';
+export { default as News } from './News';
+export { default as Plant } from './Plant';
+export { default as Shop } from './Shop';
+export { default as Home } from './Home';
+export { default as Shop } from './Shop';
