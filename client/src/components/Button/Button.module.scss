@@ -1,0 +1,24 @@
+@import '../../styles/roots';
+
+.button {
+  background-color: $accent-color;
+  color: $white-color;
+  font-size: 22px;
+  padding: 24px 56px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  &.light {
+    background-color: $white-color;
+    color: $dark-color;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background-color: $light-color;
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
