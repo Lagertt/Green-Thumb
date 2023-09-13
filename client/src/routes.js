@@ -2,12 +2,16 @@ import {
   ADMIN_ROUTE,
   BASKET_ROUTE,
   SHOP_ROUTE,
+  CONTACTS_ROUTE,
+  DELIVERY_ROUTE,
+  HOME_ROUTE,
+  NEWS_ROUTE,
   REGISTRATION_ROUTE,
   LOGIN_ROUTE,
   PLANT_ROUTE,
 } from './utils/consts';
 
-import {} from './pages/index';
+import { Admin, Auth, Basket, Shop, Contacts, Delivery, Home, News, Plant } from './pages/index';
 
 export const authRoutes = [
   {
@@ -34,7 +38,23 @@ export const publicRoutes = [
     Component: Auth,
   },
   {
+    path: CONTACTS_ROUTE,
+    Component: Contacts,
+  },
+  {
+    path: DELIVERY_ROUTE,
+    Component: Delivery,
+  },
+  {
     path: PLANT_ROUTE + '/:id',
     Component: Plant,
+  },
+  {
+    path: HOME_ROUTE,
+    Component: Home,
+  },
+  {
+    path: NEWS_ROUTE,
+    Component: News,
   },
 ];
