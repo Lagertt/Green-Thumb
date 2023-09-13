@@ -1,0 +1,47 @@
+@import '../../styles/index';
+
+.hero {
+  background-image: url('../../assets/img/hero.png');
+  background-size: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: calc(100vh - 40px);
+  background-color: $light-color;
+
+  & .wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(80, 128, 107, 0.2);
+    backdrop-filter: blur(20px);
+    padding: 0 40px;
+    text-align: center;
+
+    & .title {
+      font-size: 70px;
+      font-weight: 600;
+      padding-bottom: 40px;
+      font-family: 'Comfortaa';
+    }
+
+    & .descr {
+      font-size: 22px;
+      padding: 0 100px 60px 100px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: $accent-color;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    bottom: -40px;
+  }
+}
