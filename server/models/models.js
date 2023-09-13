@@ -19,7 +19,6 @@ const BasketPlant = sequelize.define('basket_plant', {
 const Plant = sequelize.define('plant', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   name: { type: DataTypes.STRING, unique: true, allowNull: false },
-  description: { type: DataTypes.STRING },
   price: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 0 },
   img: { type: DataTypes.STRING },
   watering: { type: DataTypes.STRING },
