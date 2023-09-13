@@ -16,45 +16,45 @@ import { Admin, Auth, Basket, Shop, Contacts, Delivery, Home, News, Plant } from
 export const authRoutes = [
   {
     path: ADMIN_ROUTE,
-    Component: Admin,
+    Component: <Admin />,
   },
   {
     path: BASKET_ROUTE,
-    Component: Admin,
+    Component: <Basket />,
   },
 ];
 
 export const publicRoutes = [
   {
     path: SHOP_ROUTE,
-    Component: Shop,
+    Component: <Shop />,
   },
   {
     path: REGISTRATION_ROUTE,
-    Component: Auth,
+    Component: <Auth />,
   },
   {
     path: LOGIN_ROUTE,
-    Component: Auth,
+    Component: <Auth />,
   },
   {
     path: CONTACTS_ROUTE,
-    Component: Contacts,
+    Component: <Contacts />,
   },
   {
     path: DELIVERY_ROUTE,
-    Component: Delivery,
+    Component: <Delivery />,
   },
   {
     path: PLANT_ROUTE + '/:id',
-    Component: Plant,
+    Component: <Plant />,
   },
   {
     path: HOME_ROUTE,
-    Component: Home,
+    Component: <Home />,
   },
   {
     path: NEWS_ROUTE,
-    Component: News,
+    Component: <News />,
   },
 ];

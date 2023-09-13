@@ -1,10 +1,10 @@
 export const ADMIN_ROUTE = '/admin';
 export const BASKET_ROUTE = '/basket';
-export const SHOP_ROUTE = '/basket';
-export const LOGIN_ROUTE = '/basket';
-export const REGISTRATION_ROUTE = '/basket';
+export const SHOP_ROUTE = '/shop';
+export const LOGIN_ROUTE = '/login';
+export const REGISTRATION_ROUTE = '/registration';
 export const PLANT_ROUTE = '/plant';
 export const CONTACTS_ROUTE = '/contacts';
 export const DELIVERY_ROUTE = '/delivery';
-export const HOME_ROUTE = '/';
+export const HOME_ROUTE = '/home';
 export const NEWS_ROUTE = '/news';
