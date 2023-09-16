@@ -7,18 +7,21 @@
   padding: 24px 56px;
   border-radius: 20px;
   cursor: pointer;
+  will-change: transform;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: #003f33;
+  }
+  &:active {
+    transform: scale(0.98);
+  }
 
   &.light {
     background-color: $white-color;
     color: $dark-color;
     text-transform: uppercase;
-  }
-
-  &:hover {
-    background-color: $light-color;
-  }
-  &:active {
-    transform: scale(0.98);
+    &:hover {
+      background-color: $light-color;
+    }
   }
 }
