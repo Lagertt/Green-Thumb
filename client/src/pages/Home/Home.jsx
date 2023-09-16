@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
 import cl from './Home.module.scss';
 
-import Hero from '../../components/Hero/Hero';
-import Categories from '../../components/Categories/Categories';
-import BestCelling from '../../components/BestCelling/BestCelling';
-import Footer from '../../components/Footer/Footer';
-import HotNews from '../../components/HotNews/HotNews';
-import FantasticDeals from '../../components/FantasticDeals/FantasticDeals';
+import Header from '../../components/sections/Header/Header';
+import Hero from '../../components/sections/Hero/Hero';
+import Categories from '../../components/sections/Categories/Categories';
+import BestCelling from '../../components/sections/BestCelling/BestCelling';
+import Footer from '../../components/sections/Footer/Footer';
+import HotNews from '../../components/sections/HotNews/HotNews';
+import FantasticDeals from '../../components/sections/FantasticDeals/FantasticDeals';
 
 function Home() {
   return (

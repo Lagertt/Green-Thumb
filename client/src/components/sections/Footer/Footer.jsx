@@ -1,7 +1,7 @@
 import React from 'react';
 import cl from './Footer.module.scss';
-import MarketingLine from '../MarketingLine/MarketingLine';
-import Container from '../Container/Container';
+import MarketingLine from '../../MarketingLine/MarketingLine';
+import Container from '../../Container/Container';
 
 function Footer({ children }) {
   return (

@@ -1,10 +1,10 @@
 import React from 'react';
 import cl from './Header.module.scss';
 import { Link } from 'react-router-dom';
-import Container from '../Container/Container';
-import TwoColorTitle from '../TwoColorTitle/TwoColorTitle';
-import MarketingLine from '../MarketingLine/MarketingLine';
-import { getPromotionDays } from '../../utils/workWithDates';
+import Container from '../../Container/Container';
+import TwoColorTitle from '../../TwoColorTitle/TwoColorTitle';
+import MarketingLine from '../../MarketingLine/MarketingLine';
+import { getPromotionDays } from '../../../utils/workWithDates';
 
 function Header({ title, items }) {
   const [fWord, sWord] = title.split(' ');

@@ -1,8 +1,8 @@
 import React from 'react';
 import cl from './FantasticDeals.module.scss';
-import Container from '../Container/Container';
-import SectionTitle from '../SectionTitle/SectionTitle';
-import PlantCard from '../PlantCard/PlantCard';
+import Container from '../../Container/Container';
+import SectionTitle from '../../SectionTitle/SectionTitle';
+import PlantCard from '../../PlantCard/PlantCard';
 
 function FantasticDeals() {
   return (

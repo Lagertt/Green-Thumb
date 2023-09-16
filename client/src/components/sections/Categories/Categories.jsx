@@ -1,13 +1,13 @@
 import React from 'react';
 import cl from './Categories.module.scss';
-import Container from '../../components/Container/Container';
-import img1 from '../../assets/img/categories/1.jpg';
-import img2 from '../../assets/img/categories/2.jpg';
-import img3 from '../../assets/img/categories/3.jpg';
-import img4 from '../../assets/img/categories/4.png';
-import img5 from '../../assets/img/categories/5.jpg';
-import img6 from '../../assets/img/categories/6.jpg';
-import SectionTitle from '../SectionTitle/SectionTitle';
+import Container from '../../../components/Container/Container';
+import img1 from '../../../assets/img/categories/1.jpg';
+import img2 from '../../../assets/img/categories/2.jpg';
+import img3 from '../../../assets/img/categories/3.jpg';
+import img4 from '../../../assets/img/categories/4.png';
+import img5 from '../../../assets/img/categories/5.jpg';
+import img6 from '../../../assets/img/categories/6.jpg';
+import SectionTitle from '../../SectionTitle/SectionTitle';
 
 function Categories() {
   return (
