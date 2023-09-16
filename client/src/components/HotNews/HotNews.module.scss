@@ -1,0 +1,15 @@
+@import '../../styles/index';
+
+.container {
+  margin-top: 150px;
+  background-color: $light-color;
+
+  & .cards {
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
