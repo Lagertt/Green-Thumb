@@ -1,7 +1,13 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import cl from './Home.module.scss';
-import Button from '../../components/Button/Button';
+
+import Hero from '../../components/Hero/Hero';
+import Categories from '../../components/Categories/Categories';
+import BestCelling from '../../components/BestCelling/BestCelling';
+import Footer from '../../components/Footer/Footer';
+import HotNews from '../../components/HotNews/HotNews';
+import FantasticDeals from '../../components/FantasticDeals/FantasticDeals';
 
 function Home() {
   return (
@@ -15,13 +21,18 @@ function Home() {
           { name: 'contacts', title: 'Контакты' },
         ]}
       ></Header>
-      <section className={cl.hero}>
-        <div className={cl.wrapper}>
-          <h1 className={cl.title}>Растения это наша страсть</h1>
-          <p className={cl.descr}>Даже если вы не опытный садовод, вы сможете озеленить свой дом</p>
-          <Button text="Приступить к посадке" light={true}></Button>
-        </div>
-      </section>
+
+      <Hero></Hero>
+
+      <Categories></Categories>
+
+      <BestCelling></BestCelling>
+
+      <HotNews></HotNews>
+
+      <FantasticDeals></FantasticDeals>
+
+      <Footer></Footer>
     </>
   );
 }
