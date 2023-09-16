@@ -12,16 +12,6 @@ import FantasticDeals from '../../components/sections/FantasticDeals/FantasticDe
 function Home() {
   return (
     <>
-      <Header
-        title="Green Thumb"
-        items={[
-          { name: 'home', title: 'Главная' },
-          { name: 'shop', title: 'Товары' },
-          { name: 'news', title: 'Блог' },
-          { name: 'contacts', title: 'Контакты' },
-        ]}
-      ></Header>
-
       <Hero></Hero>
 
       <Categories></Categories>
@@ -31,8 +21,6 @@ function Home() {
       <HotNews></HotNews>
 
       <FantasticDeals></FantasticDeals>
-
-      <Footer></Footer>
     </>
   );
 }

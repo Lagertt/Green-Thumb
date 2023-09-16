@@ -4,6 +4,8 @@ import AppRouter from './components/AppRouter';
 import { observer } from 'mobx-react-lite';
 import { Context } from './index';
 import { check } from './API/userAPI';
+import Header from './components/sections/Header/Header';
+import Footer from './components/sections/Footer/Footer';
 
 const App = observer(() => {
   const { user } = useContext(Context);
@@ -26,7 +28,17 @@ const App = observer(() => {
 
   return (
     <BrowserRouter>
+      <Header
+        title="Green Thumb"
+        items={[
+          { name: 'home', title: 'Главная' },
+          { name: 'shop', title: 'Товары' },
+          { name: 'news', title: 'Блог' },
+          { name: 'contacts', title: 'Контакты' },
+        ]}
+      ></Header>
       <AppRouter />
+      <Footer></Footer>
     </BrowserRouter>
   );
 });
