@@ -1,10 +1,15 @@
 import React from 'react';
 import cl from './Header.module.scss';
 import { Link } from 'react-router-dom';
+import MarketingLine from '../MarketingLine/MarketingLine';
+import { getPromotionDays } from '../../utils/workWithDates';
 
 function Header({ title, items }) {
   const [fWord, sWord] = title.split(' ');
   return (
+      <MarketingLine
+        text={`Бесплатная доставка на все садовые растения только ${getPromotionDays(5)}`}
+      ></MarketingLine>
     <header className={cl.header}>
       <div className={`${cl.header__container} container`}>
         <h2 className={cl.logo}>
