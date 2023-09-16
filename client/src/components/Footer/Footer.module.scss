@@ -1,0 +1,31 @@
+@import '../../styles/index';
+
+.container {
+  padding: 48px 0;
+  background-color: $light-color;
+
+  & .nav {
+    margin-bottom: 24px;
+  }
+
+  & .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+
+    & .item {
+      font-weight: 500;
+      cursor: pointer;
+      will-change: transform;
+      transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+      &:hover {
+        color: $accent-color;
+      }
+      &:active {
+        transform: scale(0.96);
+      }
+    }
+  }
+}
