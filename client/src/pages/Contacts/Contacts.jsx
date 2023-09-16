@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import PageName from '../../components/sections/PageName/PageName';
 
 function Contacts() {
   return (
-    <div>Contacts</div>
-  )
+    <>
+      <PageName name="Контакты" descr="Мы всегда на связи"></PageName>
+    </>
+  );
 }
 
-export default Contacts
+export default Contacts;
