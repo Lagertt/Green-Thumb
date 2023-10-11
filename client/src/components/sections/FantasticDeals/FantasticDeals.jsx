@@ -4,16 +4,14 @@ import Container from '../../Container/Container';
 import SectionTitle from '../../SectionTitle/SectionTitle';
 import PlantCard from '../../PlantCard/PlantCard';
 
-function FantasticDeals() {
+function FantasticDeals({ items }) {
   return (
     <section className={cl.container}>
       <Container>
         <SectionTitle title="Фантастические скидки"></SectionTitle>
         <div className={cl.cards}>
-          <PlantCard name="Neon Photos" price={350} discount={25}></PlantCard>
-          <PlantCard name="Neon Photos" price={350} discount={25}></PlantCard>
-          <PlantCard name="Neon Photos" price={350} discount={25}></PlantCard>
-          <PlantCard name="Neon Photos" price={350} discount={25}></PlantCard>
+          {items.length &&
+            items.map((plant, index) => <PlantCard plant={plant} key={index}></PlantCard>)}
         </div>
       </Container>
     </section>

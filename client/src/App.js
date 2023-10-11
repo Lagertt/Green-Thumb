@@ -6,6 +6,7 @@ import { Context } from './index';
 import { check } from './API/userAPI';
 import Header from './components/sections/Header/Header';
 import Footer from './components/sections/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = observer(() => {
   const { user } = useContext(Context);
@@ -14,20 +15,21 @@ const App = observer(() => {
   useEffect(() => {
     user.setUser(true);
     user.setIsAuth(true);
-    // check()
-    //   .then((data) => {
-    //     user.setUser(true);
-    //     user.setIsAuth(true);
-    //   })
-    //   .finally(() => setLoading(false));
+    check()
+      .then((data) => {
+        user.setUser(true);
+        user.setIsAuth(true);
+      })
+      .finally(() => setLoading(false));
   }, []);
 
-  // if (loading) {
-  //   return <Spinner animation={'grow'} />;
-  // }
+  if (loading) {
+    return <div>Идёт загрузка ...</div>;
+  }
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header
         title="Green Thumb"
         items={[
@@ -36,9 +38,9 @@ const App = observer(() => {
           { name: 'news', title: 'Блог' },
           { name: 'contacts', title: 'Контакты' },
         ]}
-      ></Header>
+      />
       <AppRouter />
-      <Footer></Footer>
+      <Footer />
     </BrowserRouter>
   );
 });

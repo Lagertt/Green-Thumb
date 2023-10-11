@@ -20,7 +20,8 @@ const Plant = sequelize.define('plant', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   name: { type: DataTypes.STRING, unique: true, allowNull: false },
   price: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 0 },
-  img: { type: DataTypes.STRING },
+  discount: { type: DataTypes.INTEGER, defaultValue: 0 },
+  img: { type: DataTypes.ARRAY(DataTypes.STRING) },
   watering: { type: DataTypes.STRING },
   sunlight: { type: DataTypes.STRING },
 });

@@ -48,36 +48,25 @@
       justify-content: space-between;
       column-gap: 40px;
 
-      & .search {
+      & button {
         display: flex;
         align-items: center;
-        color: #979797;
         column-gap: 10px;
-        cursor: pointer;
-        transition: color 0.3s ease-in-out;
-
-        & svg {
-          color: currentColor;
-        }
-
-        &:hover {
-          color: #110b11;
-        }
+        text-transform: none;
       }
 
       & .cart {
         display: flex;
         align-items: center;
         column-gap: 10px;
-        position: relative;
+        will-change: transform;
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 
-        &::before {
-          content: '';
-          position: absolute;
-          background-color: $grey-color;
-          height: 150%;
-          width: 1px;
-          left: -20px;
+        &:hover {
+          color: $accent-color;
+        }
+        &:active {
+          transform: scale(0.96);
         }
       }
     }

@@ -8,18 +8,24 @@ const { platform } = require('os');
 class PlantController {
   async create(req, res, next) {
     try {
-      const { name, price, watering, sunlight, typeId } = req.body;
+      const { name, price, discount, watering, sunlight, typeId } = req.body;
       const { img } = req.files;
-      let filename = uuid.v4() + '.jpg';
-      img.mv(path.resolve(__dirname, '..', 'static', filename));
+      const fileNames = [];
+
+      img.forEach((item) => {
+        let filename = uuid.v4() + '.jpg';
+        fileNames.push(filename);
+        item.mv(path.resolve(__dirname, '..', 'static', filename));
+      });
 
       const plant = await Plant.create({
         name,
         price,
+        discount,
         watering,
         sunlight,
         typeId,
-        img: filename,
+        img: fileNames,
       });
 
       return res.json(plant);
@@ -28,7 +34,7 @@ class PlantController {
     }
   }
   async getAll(req, res) {
-    const { typeId, limit, page } = req.query;
+    let { typeId, limit, page } = req.query;
     page = page || 1;
     limit = limit || 18;
     let offset = page * limit - limit;

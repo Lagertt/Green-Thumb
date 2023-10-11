@@ -1,0 +1,70 @@
+@import '../../styles/index';
+
+.container {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 8px 23px 0px rgba(80, 107, 82, 0.13);
+  border-radius: 40px;
+  row-gap: 40px;
+  margin: 50px auto;
+  padding: 40px;
+  width: 45%;
+
+  & .title {
+    font-family: 'Comfortaa';
+    font-size: 48px;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $accent-color;
+  }
+
+  & .form {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+
+    & .input {
+      background-color: transparent;
+      min-height: 36px;
+      width: 100%;
+      font-size: 20px;
+      border: none;
+      border-bottom: 2px solid transparent;
+      transition: border 0.3s ease-in-out;
+
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: transparent;
+        border-bottom: 2px solid $accent-color;
+      }
+    }
+
+    & .bottom {
+      margin-top: 20px;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 12px;
+      & .text {
+        margin: 0 auto;
+
+        & .link {
+          transition: color 0.3s ease-in-out;
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+}

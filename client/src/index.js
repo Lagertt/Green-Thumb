@@ -9,14 +9,14 @@ export const Context = createContext(null);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Context.Provider
-      value={{
-        user: new UserStore(),
-        device: new PlantStore(),
-      }}
-    >
-      <App />
-    </Context.Provider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <Context.Provider
+    value={{
+      user: new UserStore(),
+      plant: new PlantStore(),
+    }}
+  >
+    <App />
+  </Context.Provider>
+  // </React.StrictMode>
 );

@@ -15,7 +15,7 @@ export const createPlant = async (device) => {
   return data;
 };
 
-export const fetchPlants = async (typeId, brandId, page, limit = 5) => {
+export const fetchPlants = async (typeId, brandId, page, limit = 20) => {
   const { data } = await $host.get('api/plant', {
     params: {
       typeId,

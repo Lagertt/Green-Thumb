@@ -5,7 +5,6 @@ export default class PlantStore {
     this._types = [];
     this._plants = [];
     this._selectedType = {};
-    this._selectedBrand = {};
     this._page = 1;
     this._totalCount = 0;
     this._limit = 3;

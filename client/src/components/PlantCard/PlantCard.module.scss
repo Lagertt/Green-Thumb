@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+  justify-content: space-between;
   row-gap: 16px;
 
   & .info {
@@ -29,23 +30,22 @@
     }
   }
 
-  & button {
+  & a {
     width: 100%;
   }
 
   & .img {
     width: 100%;
-    height: 220px;
-    border-radius: 8px;
+    height: 280px;
+    border-radius: 9px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     will-change: transform;
 
     & img {
-      border-radius: 20px;
+      border-radius: 9px;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: bottom;
     }
   }
 }
