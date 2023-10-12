@@ -40,36 +40,38 @@ function Filters({ types, prices }) {
         </ul>
       </form>
 
-      <form className={cl.form}>
-        <div className={cl.legend}>
-          <button type="button" className={cl.toggle} onClick={() => toggleList(1)}>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className={visibleSections[1] ? cl.rotated : ''}
-            >
-              <path d="m18 15-6-6-6 6" />
-            </svg>
-            Цена
-          </button>
-        </div>
-        <div className={`${cl.inputs} ${visibleSections[1] ? cl.hidden : ''}`}>
-          <div className={cl.price}>
-            <label htmlFor="price_from">От: </label>
-            <input type="number" name="price_from" placeholder={prices.minPrice} />
+      {prices && (
+        <form className={cl.form}>
+          <div className={cl.legend}>
+            <button type="button" className={cl.toggle} onClick={() => toggleList(1)}>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className={visibleSections[1] ? cl.rotated : ''}
+              >
+                <path d="m18 15-6-6-6 6" />
+              </svg>
+              Цена
+            </button>
           </div>
-          <div className={cl.price}>
-            <label htmlFor="price_up">До: </label>
-            <input type="number" name="price_up" placeholder={prices.maxPrice} />
+          <div className={`${cl.inputs} ${visibleSections[1] ? cl.hidden : ''}`}>
+            <div className={cl.price}>
+              <label htmlFor="price_from">От: </label>
+              <input type="number" name="price_from" placeholder={prices.minPrice} />
+            </div>
+            <div className={cl.price}>
+              <label htmlFor="price_up">До: </label>
+              <input type="number" name="price_up" placeholder={prices.maxPrice} />
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      )}
     </section>
   );
 }
