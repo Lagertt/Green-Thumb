@@ -26,7 +26,7 @@ function PlantCard({ plant }) {
           </p>
         )}
       </div>
-      <Link to={`${PLANT_ROUTE}/${plant.id}`}>
+      <Link to={`${PLANT_ROUTE}/${plant.id}`} className={cl.button}>
         <Button>Купить</Button>
       </Link>
     </article>
