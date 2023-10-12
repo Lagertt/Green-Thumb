@@ -16,7 +16,7 @@ const Auth = observer(() => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  async function click(e) {
+  async function sendForm(e) {
     e.preventDefault();
     try {
       let data;
@@ -53,7 +53,7 @@ const Auth = observer(() => {
           />
 
           <div className={cl.bottom}>
-            <Button action={(e) => click(e)}>{isLogin ? 'Войти' : 'Зарегистрироваться'}</Button>
+            <Button action={(e) => sendForm(e)}>{isLogin ? 'Войти' : 'Зарегистрироваться'}</Button>
 
             {isLogin ? (
               <p className={cl.line}>
