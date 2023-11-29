@@ -1,7 +1,8 @@
 @import '../../../styles/roots';
 
 .header {
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 8px 23px 0px rgba(80, 107, 82, 0.13);
+  box-shadow: 0px 8px 23px 0px rgba(80, 107, 82, 0.13);
   background-color: $white-color;
   position: sticky;
   top: 0;
@@ -18,7 +19,6 @@
     & .logo {
       font-weight: 700;
       font-size: 26px;
-      padding-right: 20px;
       font-family: 'Comfortaa';
     }
 
@@ -26,9 +26,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      column-gap: 77px;
-      padding-right: 20px;
-      padding-left: 20px;
+      padding-right: 10px;
+      padding-left: 10px;
+      column-gap: 50px;
 
       & li {
         will-change: transform;
@@ -40,33 +40,89 @@
           transform: scale(0.96);
         }
       }
+
+      @media (max-width: 1000px) {
+        column-gap: 30px;
+      }
+      @media (max-width: 1000px) {
+        column-gap: 20px;
+      }
+      @media (max-width: 800px) {
+        display: none;
+      }
     }
 
     & .right_part {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      column-gap: 40px;
+      column-gap: 30px;
 
-      & button {
-        display: flex;
-        align-items: center;
-        column-gap: 10px;
-        text-transform: none;
+      & .burger {
+        display: none;
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+
+        @media (max-width: 800px) {
+          display: block;
+        }
       }
 
+      & .list {
+        // min-width: 200px;
+        right: 0;
+        top: 0;
+        position: absolute;
+        background-color: $white-color;
+        -webkit-box-shadow: 0px 8px 23px 0px rgba(80, 107, 82, 0.13);
+        box-shadow: 0px 8px 23px 0px rgba(80, 107, 82, 0.13);
+        border-radius: 9px;
+        overflow: hidden;
+        padding: 50px 0 10px 150px;
+        // padding-top: 50px;
+        z-index: 3;
+
+        &.hidden {
+          display: none;
+        }
+
+        & .item {
+          padding: 12px 20px;
+          text-align: right;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+          cursor: pointer;
+
+          &:hover,
+          &:active {
+            color: $accent-color;
+          }
+        }
+      }
+
+      & button,
       & .cart {
         display: flex;
         align-items: center;
         column-gap: 10px;
-        will-change: transform;
+        text-transform: none;
+        background-color: transparent;
+        cursor: pointer;
         transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        will-change: transform;
 
         &:hover {
           color: $accent-color;
         }
         &:active {
           transform: scale(0.96);
+        }
+      }
+
+      @media (max-width: 800px) {
+        & .svg {
+          height: 20px;
+          width: auto;
         }
       }
     }

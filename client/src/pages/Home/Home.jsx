@@ -24,7 +24,7 @@ const Home = observer(() => {
 
       <BestCelling />
 
-      {/* <HotNews /> */}
+      {/* {plant.plants.length && <HotNews items={plant.plants.slice(4, 8)} />} */}
 
       {plant.plants.length && (
         <FantasticDeals items={plant.plants.filter((item) => item.discount > 0).splice(0, 4)} />

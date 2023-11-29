@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import cl from './SortPopup.module.scss';
 
 function SortPopup({ items, onChange, value }) {
-  const [visiblePopup, setVisiblePopup] = React.useState(false);
-  const [activeItem, setActiveItem] = React.useState(0);
+  const [visiblePopup, setVisiblePopup] = useState(false);
+  const [activeItem, setActiveItem] = useState(0);
   const activeLabel = items[activeItem].name;
 
-  const sortRef = React.useRef();
+  const sortRef = useRef();
 
   const toggleVisiblePopup = () => {
     setVisiblePopup(!visiblePopup);
@@ -21,11 +21,11 @@ function SortPopup({ items, onChange, value }) {
     if (!event.composedPath().includes(sortRef.current)) setVisiblePopup(false);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.body.addEventListener('click', hadleOutsideClick);
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     value = items[activeItem].value;
     onChange(value);
   }, [activeItem]);

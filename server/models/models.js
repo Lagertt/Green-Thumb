@@ -8,6 +8,19 @@ const User = sequelize.define('user', {
   role: { type: DataTypes.STRING, defaultValue: 'USER' },
 });
 
+const NewsCategory = sequelize.define('news_category', {
+  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  name: { type: DataTypes.STRING, unique: true, allowNull: false },
+});
+
+const News = sequelize.define('news', {
+  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  title: { type: DataTypes.STRING, allowNull: false, unique: true },
+  text: { type: DataTypes.TEXT, allowNull: false },
+  date: { type: DataTypes.DATEONLY, defaultValue: DataTypes.NOW },
+  img: { type: DataTypes.STRING },
+});
+
 const Basket = sequelize.define('basket', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 });
@@ -22,8 +35,8 @@ const Plant = sequelize.define('plant', {
   price: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 0 },
   discount: { type: DataTypes.INTEGER, defaultValue: 0 },
   img: { type: DataTypes.ARRAY(DataTypes.STRING) },
-  watering: { type: DataTypes.STRING },
-  sunlight: { type: DataTypes.STRING },
+  watering: { type: DataTypes.TEXT },
+  sunlight: { type: DataTypes.TEXT },
 });
 
 const Type = sequelize.define('type', {
@@ -38,10 +51,16 @@ Basket.hasMany(BasketPlant);
 BasketPlant.belongsTo(Basket);
 
 Type.hasMany(Plant);
-Plant.belongsTo(Basket);
+Plant.belongsTo(Type);
 
 Plant.hasMany(BasketPlant);
 BasketPlant.belongsTo(Plant);
+
+NewsCategory.hasMany(News);
+News.belongsTo(NewsCategory);
+
+User.hasMany(News);
+News.belongsTo(User);
 
 module.exports = {
   User,
@@ -49,4 +68,6 @@ module.exports = {
   BasketPlant,
   Type,
   Plant,
+  News,
+  NewsCategory,
 };

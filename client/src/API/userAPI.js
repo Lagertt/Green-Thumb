@@ -23,3 +23,8 @@ export const logout = async (email, password) => {
   const { data } = await $authHost.get('api/user/auth');
   localStorage.removeItem('token', data.token);
 };
+
+export const fetchOneUser = async (id) => {
+  const { data } = await $host.get('api/user/' + id);
+  return data;
+};

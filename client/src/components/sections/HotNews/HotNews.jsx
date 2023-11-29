@@ -4,20 +4,14 @@ import Container from '../../Container/Container';
 import SectionTitle from '../../SectionTitle/SectionTitle';
 import PlantCard from '../../PlantCard/PlantCard';
 
-function HotNews() {
+function HotNews({ items }) {
   return (
     <section className={cl.container}>
       <Container>
         <SectionTitle title="Горячие новинки" haveButton={true}></SectionTitle>
         <div className={cl.cards}>
-          <PlantCard name="Neon Photos" price="350"></PlantCard>
-          <PlantCard name="Neon Photos" price="350"></PlantCard>
-          <PlantCard name="Neon Photos" price="350"></PlantCard>
-          <PlantCard name="Neon Photos" price="350"></PlantCard>
-          <PlantCard name="Neon Photos" price="350"></PlantCard>
-          <PlantCard name="Neon Photos" price="350"></PlantCard>
-          <PlantCard name="Neon Photos" price="350"></PlantCard>
-          <PlantCard name="Neon Photos" price="350"></PlantCard>
+          {items.length &&
+            items.map((plant, index) => <PlantCard plant={plant} key={index}></PlantCard>)}
         </div>
       </Container>
     </section>

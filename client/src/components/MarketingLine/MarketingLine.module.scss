@@ -1,12 +1,16 @@
 @import '../../styles/roots';
 
-.line {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0;
+.cont {
   background-color: $accent-color;
-  color: $white-color;
-  font-weight: 600;
-  text-transform: uppercase;
+
+  & .line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    color: $white-color;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }

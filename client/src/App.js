@@ -7,17 +7,16 @@ import { check } from './API/userAPI';
 import Header from './components/sections/Header/Header';
 import Footer from './components/sections/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import { SHOP_ROUTE, CONTACTS_ROUTE, NEWS_ROUTE, HOME_ROUTE } from './utils/consts';
 
 const App = observer(() => {
   const { user } = useContext(Context);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    user.setUser(true);
-    user.setIsAuth(true);
     check()
       .then((data) => {
-        user.setUser(true);
+        user.setUser(data);
         user.setIsAuth(true);
       })
       .finally(() => setLoading(false));
@@ -33,10 +32,10 @@ const App = observer(() => {
       <Header
         title="Green Thumb"
         items={[
-          { name: 'home', title: 'Главная' },
-          { name: 'shop', title: 'Товары' },
-          { name: 'news', title: 'Блог' },
-          { name: 'contacts', title: 'Контакты' },
+          { name: 'home', title: 'Главная', route: HOME_ROUTE },
+          { name: 'shop', title: 'Товары', route: SHOP_ROUTE },
+          { name: 'news', title: 'Блог', route: NEWS_ROUTE },
+          { name: 'contacts', title: 'Контакты', route: CONTACTS_ROUTE },
         ]}
       />
       <AppRouter />

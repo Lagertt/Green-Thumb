@@ -1,8 +1,15 @@
 import React from 'react';
 import cl from './MarketingLine.module.scss';
+import Container from '../Container/Container';
 
 function MarketingLine({ text }) {
-  return <div className={cl.line}>{text}</div>;
+  return (
+    <section className={cl.cont}>
+      <Container>
+        <div className={cl.line}>{text}</div>
+      </Container>
+    </section>
+  );
 }
 
 export default MarketingLine;

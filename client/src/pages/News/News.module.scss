@@ -1,79 +1,15 @@
 @import '../../styles/index';
 
 .cont {
-  display: flex;
   margin-top: 106px;
   margin-bottom: 60px;
   column-gap: 60px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
 
   & .news {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 80px 40px;
-
-    & .item {
-      display: flex;
-      flex-direction: column;
-      row-gap: 14px;
-
-      & .image {
-        height: 300px;
-        width: 100%;
-        border-radius: 10px;
-        will-change: scale;
-        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-        cursor: pointer;
-
-        & img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 10px;
-        }
-
-        &:hover {
-          box-shadow: 0px 8px 23px 0px rgba(80, 107, 82, 0.13);
-        }
-
-        &:active {
-          transform: scale(0.98);
-        }
-      }
-
-      & .title {
-        font-family: 'Comfortaa';
-        font-size: 30px;
-        font-weight: 500;
-      }
-
-      & .characters {
-        display: flex;
-        column-gap: 20px;
-        color: $grey-color;
-        font-size: 12px;
-      }
-
-      & .descr {
-        color: $grey-color;
-        text-align: justify;
-      }
-
-      & .show_more {
-        font-family: 'Comfortaa';
-        display: flex;
-        align-items: center;
-        background-color: inherit;
-        cursor: pointer;
-        transition: margin 0.3s ease-in-out;
-
-        & svg {
-          transform: scale(0.8);
-        }
-
-        &:hover {
-          margin-left: 10px;
-        }
-      }
-    }
   }
 }

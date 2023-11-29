@@ -40,9 +40,7 @@ function Contacts() {
               </svg>
               <div className={cl.text}>
                 <p className={cl.title}>Адрес</p>
-                <p className={cl.info}>
-                  797294, Курганская область, город Люберцы, спуск Чехова, 14
-                </p>
+                <p className={cl.info}>614526, Пермский край, город Пермь, улица Ленина, 14</p>
               </div>
             </li>
             <li className={cl.item}>
